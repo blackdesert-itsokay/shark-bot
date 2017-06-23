@@ -1,0 +1,90 @@
+{
+  "token": "MzI2OTQ1Njc4MTcxMzA4MDMz.DCvaNA.Qw9GeWpYeTQG740FlYzdjoLrcME",
+  "prefix": "!",
+  "spliter": "ゞ",
+  "adminRoleName": [
+    {
+      "name": "會長-沒關西"
+    },
+    {
+      "name": "副會長"
+    }
+  ],
+  "valid": {
+    "level": [
+      {
+        "text": "55以下"
+      },
+      {
+        "text": "65"
+      },
+      {
+        "text": "64"
+      },
+      {
+        "text": "63"
+      },
+      {
+        "text": "62"
+      },
+      {
+        "text": "61"
+      },
+      {
+        "text": "60"
+      },
+      {
+        "text": "59"
+      },
+      {
+        "text": "58"
+      },
+      {
+        "text": "57"
+      },
+      {
+        "text": "56"
+      }
+    ],
+    "class": [
+      {
+        "text": "戰士"
+      },
+      {
+        "text": "遊俠"
+      },
+      {
+        "text": "魔女"
+      },
+      {
+        "text": "狂戰士"
+      },
+      {
+        "text": "馴獸師"
+      },
+      {
+        "text": "巫師"
+      },
+      {
+        "text": "女巫"
+      },
+      {
+        "text": "女武神"
+      },
+      {
+        "text": "武士"
+      },
+      {
+        "text": "梅花"
+      },
+      {
+        "text": "忍者"
+      },
+      {
+        "text": "女忍者"
+      }
+    ],
+    "attack_max": "300",
+    "defense_max": "400"
+  }
+}
