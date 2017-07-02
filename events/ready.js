@@ -3,7 +3,7 @@ const file = require('../util/file');
 let ready = {
   func: (bot) => {
     bot.guilds.map(function (guild) {
-      let dir = `./resources/member-${guild.id}.json`
+      let dir = `./resources/member/member-${guild.id}.json`;
       file.read(dir, (err, data) => {
         if (err) {
           var jsonObject = {
@@ -23,8 +23,6 @@ let ready = {
             var element = { "name": name, "id": guildMember.id };
             jsonObject.member.push(element);
           });
-
-          var dir = `./resources/member-${guild.id}.json`;
 
           file.write(dir, jsonObject, () => {
             // write json file completed
