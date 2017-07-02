@@ -138,7 +138,7 @@ let update = {
 
     sheetService.updatePlayer(name, column, value, (player) => {
       if (player == null) {
-        message.channel.send(`找不到 ${args[0]} 的資訊，請確定查看的家門名稱正確無誤\n或是你還沒有填寫表單`);
+        message.channel.send(`找不到 ${name} 的資訊，請確定查看的家門名稱正確無誤\n或是你還沒有填寫表單`);
         return;
       }
 
