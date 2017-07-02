@@ -57,4 +57,4 @@ typings/
 # dotenv environment variables file
 .env
 
-resources/member/*
+resources/member-*.json
