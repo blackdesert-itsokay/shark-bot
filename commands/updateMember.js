@@ -58,7 +58,7 @@ let updateMember = {
       });
 
       var serverId = message.guild.id;
-      var dir = `./resources/member-${serverId}.json`;
+      var dir = `./resources/member/member-${serverId}.json`;
 
       file.write(dir, jsonObject, () => {
         // write json file completed
