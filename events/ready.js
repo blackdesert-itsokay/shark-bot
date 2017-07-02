@@ -3,7 +3,7 @@ const file = require('../util/file');
 let ready = {
   func: (bot) => {
     bot.guilds.map(function (guild) {
-      let dir = `./resources/member/member-${guild.id}.json`;
+      let dir = `./resources/member-${guild.id}.json`;
       file.read(dir, (err, data) => {
         if (err) {
           var jsonObject = {
