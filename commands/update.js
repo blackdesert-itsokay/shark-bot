@@ -75,21 +75,21 @@ let update = {
       column = sheetService.column_attack;
       valueCheck = attackDefenseValid(args[1], bot.config.valid.attack_max);
       errText = `請確實填寫覺醒攻擊力 0~${bot.config.valid.attack_max}`;
-      if(valueCheck)
+      if (valueCheck)
         value = parseInt(args[1], 10).toFixed(0);
     }
     else if (args[0] == "覺醒攻擊") {
       column = sheetService.column_awakening;
       valueCheck = attackDefenseValid(args[1], bot.config.valid.attack_max);
       errText = `請確實填寫覺醒攻擊力 0~${bot.config.valid.attack_max}`;
-      if(valueCheck)
+      if (valueCheck)
         value = parseInt(args[1], 10).toFixed(0);
     }
     else if (args[0] == "防禦") {
       column = sheetService.column_defense;
       valueCheck = attackDefenseValid(args[1], bot.config.valid.defense_max);
       errText = `請確實填寫防禦力 0~${bot.config.valid.defense_max}`;
-      if(valueCheck)
+      if (valueCheck)
         value = parseInt(args[1], 10).toFixed(0);
     }
     else {
@@ -111,14 +111,16 @@ let update = {
       var arr = message.guild.members.get(id).nickname.split(spliter);
       if (arr.length != 2) {
         message.channel.send(`找不到 ${arr} 的資訊\n` +
-          `請確定你的discord暱稱是否符合公會規則`);
+          `請確定你的discord暱稱是否符合公會規則\n` +
+          `注意是暱稱不是使用者名稱`);
         return;
       } else {
         name = arr[1].replace(/ /g, "");
       }
     } catch (err) {
       message.channel.send(`找不到 ${name} 的資訊\n` +
-        `請確定你的discord暱稱是否符合公會規則`);
+        `請確定你的discord暱稱是否符合公會規則\n` +
+        `注意是暱稱不是使用者名稱`);
       return;
     }
 
@@ -142,56 +144,6 @@ let update = {
 
       message.channel.send(`${name}已經更改${column}為${value}`);
     });
-    // sheetService.getPlayer(name, function (player) {
-    //   if (player == null) {
-    //     message.channel.send(`找不到 ${name} 的資訊\n` +
-    //       `可能你尚未填寫調查表單 - ` + `https://goo.gl/ZU8XW3`);
-    //     return;
-    //   }
-
-    //   message.channel.send({
-    //     embed: {
-    //       color: 3447003,
-    //       title: `${player[sheetService.column_name]}\n`,
-    //       description: "|",
-    //       fields: [{
-    //         name: `等級`,
-    //         value: `${player[sheetService.column_level]}`,
-    //         inline: true
-    //       },
-    //       {
-    //         name: `職業`,
-    //         value: `${player[sheetService.column_class]}`,
-    //         inline: true
-    //       },
-    //       {
-    //         name: "|",
-    //         value: "|",
-    //         inline: true
-    //       },
-    //       {
-    //         name: `攻擊`,
-    //         value: `${player[sheetService.column_attack]}`,
-    //         inline: true
-    //       },
-    //       {
-    //         name: `覺醒攻擊`,
-    //         value: `${player[sheetService.column_awakening]}`,
-    //         inline: true
-    //       },
-    //       {
-    //         name: `防禦`,
-    //         value: `${player[sheetService.column_defense]}`,
-    //         inline: true
-    //       }
-    //       ],
-    //       timestamp: new Date(),
-    //       footer: {
-    //         text: `© by ${bot.user.username}`
-    //       }
-    //     }
-    //   });
-    // });
   }
 }
 
